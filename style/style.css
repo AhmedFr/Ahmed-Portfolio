@@ -1,0 +1,42 @@
+@import "/style/fonts.css";
+
+h1 {
+    font-family: Montserrat;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-family: Montserrat;
+}
+
+ul a:first-child {
+    margin-right: 62%;
+}
+
+.navbar {
+    background-color: #ffffff;
+    color: black;
+    border-bottom: 4px solid black;
+    border-radius: 4px;
+}
+
+.navbar a{
+    color: black;
+    font-size: 32px;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.active {
+    text-decoration: #2940d3 underline !important;
+    text-underline-offset: 4px;
+}
+
+.navbar a:hover {
+    background-color: #ebebeb
+}

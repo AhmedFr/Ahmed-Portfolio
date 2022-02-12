@@ -1,42 +1,128 @@
 @import "/style/fonts.css";
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 h1 {
     font-family: Montserrat;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    font-family: Montserrat;
-}
-
-ul a:first-child {
-    margin-right: 62%;
-}
-
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #ffffff;
     color: black;
     border-bottom: 4px solid black;
-    border-radius: 4px;
+    font-family: Montserrat;
 }
 
-.navbar a{
+
+.brandName {
+    display: block;
+    color: black;
+    font-size: 36px;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 8px;   
+}
+
+.brandName a {
+    color: black;
+    text-decoration: none;
+}
+
+.brandName:hover {
+    background-color: #ebebeb
+}
+
+.navbar-links ul {
+    display:flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    border-radius: 8px;
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    color: black;
+}
+
+.navbar-links{
+    display: flex;
+    justify-content: space-between;
     color: black;
     font-size: 32px;
     text-decoration: none;
     padding: 16px;
-    border-radius: 8px;
+    border-radius: 16px;
+}
+
+.navbar-links li:hover {
+    background-color: #ebebeb
 }
 
 .active {
     text-decoration: #2940d3 underline !important;
     text-underline-offset: 4px;
+    font-weight: bold;
 }
 
-.navbar a:hover {
-    background-color: #ebebeb
+.menu-button {
+    position: absolute;
+    display:none;
+    top: 1rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content:space-between;
+    width:30px;
+    height: 21px;
+}
+
+.menu-button .bar {
+    height: 4px;
+    width: 100%;
+    background-color: #000000;
+    border-radius:8px;
+}
+
+@media (max-width:800px) {
+    .menu-button {
+        display:flex;
+    }
+    .navbar-links {
+        width: 100%;
+        display: none;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-links li {
+        text-align: center;
+    }
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.shown {
+        display: flex;
+    }
 }

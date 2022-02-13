@@ -1,16 +1,8 @@
 @import "/style/fonts.css";
+@import "/style/sections.css";
 
 * {
     box-sizing: border-box;
-}
-
-section {
-    height: 90vh;
-    padding:5rem 4rem;
-}
-
-section:last-of-type {
-    height: 100vh;
 }
 
 html {
@@ -26,6 +18,24 @@ body {
 
 h1 {
     font-family: Montserrat;
+}
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wave1 {
+    background-image: url("/assets/bg/fit-wave.svg");
+}
+.wave2 {
+    background-image: url("/assets/bg/fit-wave2.svg");
+}
+.wave3 {
+    background-image: url("/assets/bg/fit-wave-orange.svg");
 }
 
 .navbar {
@@ -194,5 +204,11 @@ h1 {
     }
     .navbar-links.shown {
         display: flex;
+    }
+    .footer {
+        flex-direction: column;
+    }
+    .portfolioLink a {
+        padding: 1rem;
     }
 }

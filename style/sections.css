@@ -1,0 +1,12 @@
+section {
+    height: 90vh;
+    padding:5rem 4rem;
+}
+
+section:last-of-type {
+    height: 100vh;
+}
+
+section h1 {
+    font-size: 36px;
+}

@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
-import Navbar from '../Components/Navbar'
+import React from 'react'
 
-export default class Home extends Component {
+class Home extends React.Component  {
   render() {
     return (
       <>
         <div>Home</div>
-        <Navbar/>
       </>
     )
   }
 }
+
+export default Home;
